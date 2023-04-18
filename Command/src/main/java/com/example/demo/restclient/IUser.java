@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.example.demo.entities.Produit;
 import com.example.demo.entities.User;
 
 @FeignClient(name = "CUSTOMER-SERVICE")
@@ -15,4 +16,7 @@ public interface IUser {
 	public User getuser(@PathVariable long id);
 	@PostMapping("users")
 	public User saveu(@RequestBody User u);
+	
+	
+
 }
